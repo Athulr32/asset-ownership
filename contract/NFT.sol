@@ -24,7 +24,7 @@ contract Project is ERC721, ERC721URIStorage, Ownable {
 
      mapping(uint256 => address) private _tokenApprovals;
     
-    constructor() ERC721("Project", "FYR") {
+    constructor() ERC721("Project", "GFG") {
          _tokenIdCounter.increment();
     }
 

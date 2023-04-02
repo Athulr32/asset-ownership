@@ -29,9 +29,13 @@ function NFT({ imageClick,address, contract }) {
             }
             console.log("TOk",tokenNum)
             const res = await mainContract.tokenURI(tokenNum);
-            const jsonres = await fetch("https://api.ipfsbrowser.com/ipfs/get.php?hash=" + res);
+            let foo = res.slice(7);
+            let url = "https://ipfs.io/ipfs/" + foo
+            console.log(url)
+            const jsonres = await fetch(url);
             const response = await jsonres.json();
-            arr.push(response.table[0].image)
+            let imageurl = response.image;
+            arr.push("https://ipfs.io/ipfs/"+imageurl.slice(7))
             tok.push(tokenNum)
         }
         console.log("Arr",arr)

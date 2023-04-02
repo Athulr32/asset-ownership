@@ -59,8 +59,8 @@ function MintNFT({ contract,setMintFalse}) {
         }).then((res) => {
             return res.json()
         }).then(async data => {
-          
-          await  mintToken(data.data)
+            console.log(data)
+          await  mintToken(data.cid)
            
         })
 

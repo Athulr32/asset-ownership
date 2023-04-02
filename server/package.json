@@ -2,6 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,10 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@filebase/client": "^0.0.4",
     "@pinata/sdk": "^1.1.26",
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "formidable": "^2.0.1",
+    "nft.storage": "^7.0.3",
     "react-qr-code": "^2.0.8",
     "react-router-dom": "^6.4.3"
   }
